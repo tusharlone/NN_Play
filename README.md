@@ -1,2 +1,2 @@
-# NN_Play
-An interactive tool for experimenting with neural network configurations and visualizing how key parameters affect performance and surface approximation.
+# Neural Network Playground
+Neural Network Playground is an interactive tool that allows users to experiment with neural network configurations by inputting an analytical expression and customizing key parameters, such as the number of layers, neurons, activation functions, error functions, and learning rates. The app generates and trains a neural network to approximate a smooth surface based on the input, providing valuable insights into how these parameters influence the network's performance and behavior. Ideal for anyone interested in understanding and visualizing the impact of neural network design choices.
