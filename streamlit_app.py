@@ -101,7 +101,7 @@ def main():
     )
     st.sidebar.header('Neural Network Paramters')
     # Get user input for neural network parameters
-    learning_rate = st.sidebar.number_input("Enter learning rate:", 0.001, 0.5, 0.01, 0.001)
+    learning_rate = st.sidebar.number_input("Enter learning rate:", min_value=0.001, max_value=0.9, value=0.01, step=0.01)
     hidden_layer_sizes = st.sidebar.text_input("Enter hidden layer sizes (comma-separated):", "8").split(',')
     hidden_layer_sizes = [int(size) for size in hidden_layer_sizes]
     activation_function_name = st.sidebar.selectbox("Select activation function:", ['ReLU', 'Sigmoid', 'Tanh'], index=0)
