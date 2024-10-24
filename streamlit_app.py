@@ -61,7 +61,9 @@ def main():
     #st.set_option('deprecation.showPyplotGlobalUse', False)
     st.title("NN Playground")
     st.write("Neural Network Playground is an interactive tool designed to help users understand the importance of tuning neural network hyperparameters. The app takes an analytical expression in the form f(x, y) = x² + y² and creates a neural network (NN) to approximate the surface of the function f(x, y). To achieve this, the function is evaluated at random values of x and y to generate a set of training points, which are then used to train the NN. Users can experiment with various NN hyperparameters, such as the number of layers, the number of neurons per layer, activation functions, learning rates, and more. The app provides real-time feedback on NN performance as these parameters are adjusted, offering valuable insights into how they affect the network's behavior. This tool is ideal for anyone interested in exploring and visualizing the impact of neural network design choices.")
-
+    
+    st.sidebar.header('Analytical Expression')
+    
     # Get user input for the mathematical function
     expression = st.sidebar.text_input("Enter a mathematical expression in terms of x and y (e.g., x^2 + y^2):",value="(x-y)**2")
 
@@ -138,12 +140,13 @@ def main():
         validplot = plt.plot(epoch + 1, validation_loss, marker='.', color='b',label="validation set")
 
     plt.legend(["train set","validation set"])
-    # Display the matplotlib chart
-    st.pyplot(plt)
 
     # Plot the original mathematical function and neural network approximation
     fig = plot_math_function_and_approximation(func, x_values, y_values, model)
     st.plotly_chart(fig)
+
+    # Display the matplotlib chart
+    st.pyplot(plt)
 
 if __name__ == "__main__":
     main()
