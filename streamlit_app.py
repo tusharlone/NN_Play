@@ -51,7 +51,7 @@ def plot_math_function_and_approximation(func, x_values, y_values, model):
 
     fig.add_trace(go.Surface(z=predictions, x=x_values, y=y_values, name='Neural Network Approximation',opacity=0.8))
 
-    fig.update_layout(scene=dict(xaxis_title='X-axis', yaxis_title='Y-axis', zaxis_title='Z-axis'),
+    fig.update_layout(scene=dict(xaxis_title='X-axis', yaxis_title='Y-axis', zaxis_title='f(x,y)'),
                       margin=dict(l=0, r=0, b=0, t=40),
                       scene_camera=dict(eye=dict(x=1.87, y=0.88, z=-0.64)))
 
